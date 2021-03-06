@@ -6,10 +6,6 @@ services:
 env:
   - NODE_VERSION=8-jessie
   - NODE_VERSION=10-jessom
-  #- NPM_TARGET=test
-  #- NPM_TARGET=lint
-  #- NPM_TARGET=coverage
-
 
 script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
@@ -21,8 +17,6 @@ script:
 stages:
   - test
   - npm-targets
-
-
 
 jobs:
   include:
